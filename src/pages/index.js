@@ -81,7 +81,7 @@ const AIAgentAnimationSection = () => {
             <div className="col-span-4 flex flex-col z-10 h-full  justify-between py-10">
               {inputStuff.map((item, index) => (
                 <div
-                  key={item}
+                  key={index}
                   className="w-full flex"
                   style={{ marginLeft: `${inputStuffPosition[index]}%` }}
                 >
@@ -117,7 +117,7 @@ const AIAgentAnimationSection = () => {
             <div className="col-span-4 z-50 flex flex-col h-full  justify-between py-10">
               {outputStuff.map((item, index) => (
                 <div
-                  key={item}
+                  key={index}
                   className="w-full flex justify-end"
                   style={{ paddingRight: `${outputStuffPosition[index]}%` }}
                 >
@@ -153,9 +153,9 @@ const ScreenTypesSection = () => {
     <section id="screen-types" className="border-t border-b border-gray-200 ">
       <Container>
         <div className="flex justify-between gap-8">
-          {screenTypes.map((screenType) => (
+          {screenTypes.map((screenType, index) => (
             <div
-              key={screenType.title}
+              key={index}
               className="flex-1 outline-1 outline-gray-200 flex flex-col"
             >
               <div className="w-full add-border-page-full relative">
@@ -222,7 +222,10 @@ const StepsSection = () => {
       <Container>
         <div className="w-full grid grid-cols-10 gap-2">
           {stepsArr.map((step, index) => (
-            <div className="col-span-2 flex flex-col items-center justify-center add-border-page-full pt-12">
+            <div
+              key={index}
+              className="col-span-2 flex flex-col items-center justify-center add-border-page-full pt-12"
+            >
               <div className="text-sm text-gray-600 font-medium px-4 py-2 border border-gray-200 mb-6">
                 Step {index + 1}
               </div>
@@ -237,6 +240,7 @@ const StepsSection = () => {
         <div className="w-full grid grid-cols-10 gap-2">
           {stepsArr.map((step, index) => (
             <div
+              key={index}
               className={`col-span-2 flex flex-col bg-gray-50 border-l border-r border-gray-200 ${
                 index === 0 ? "border-l-0" : ""
               } ${index === stepsArr.length - 1 ? "border-r-0" : ""}`}
