@@ -1,115 +1,282 @@
+import FlowLinesA from "@/components/FlowLinesA";
+import Container from "@/components/LayoutBlocks/Container";
+import Header from "@/components/LayoutBlocks/Header";
+import HeroBackgroundFrosting from "@/components/MainHeroSection/HeroBackgroundFrosting";
+import MainHero from "@/components/MainHeroSection/MainHero";
+import MainLayout from "@/components/MainLayout";
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const Hero2Section = () => {
+  return (
+    <section id="hero2" className="w-full border-t border-b border-gray-200 ">
+      <Container>
+        <div className="w-full max-w-2xl mx-auto text-center relative z-50">
+          <div className=" flex flex-col items-center py-24">
+            <h3 className="text-3xl font-bold mb-2">
+              A way to transform your onboarding
+            </h3>
+            <p className="text-gray-600 text-lg max-w-md">
+              Platform for modern product teams to deliver personalized,
+              AI-driven training so every user persona reaches value—fast.
+            </p>
+          </div>
+        </div>
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+        <div
+          className="absolute top-0 left-0 w-full h-full z-10"
+          style={{
+            backgroundImage: `url('/images/noise.svg')`,
+          }}
+        ></div>
+
+        <div
+          style={{
+            backgroundImage: `url('/images/im-stripe-2.jpg')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          className="absolute top-0 left-0 w-full h-full bg-white"
+        ></div>
+      </Container>
+    </section>
+  );
+};
+
+const AIAgentAnimationSection = () => {
+  const inputStuff = [
+    "Video Tutorials",
+    "Documentation",
+    "Product Updates",
+    "Onboarding Webinars",
+  ];
+  const outputStuff = [
+    "AI Generated Guides",
+    "Onboarding Portals",
+    "AI Chatbots",
+  ];
+
+  const inputStuffPosition = [20, 10, 0, 20, 20];
+  const outputStuffPosition = [20, 0, 20];
+  return (
+    <section id="aiagent" className="">
+      <Container>
+        <div className="py-24 z-40">
+          <div className="text-center w-full max-w-4xl mx-auto flex flex-col items-center">
+            <h3 className="text-3xl font-bold mb-2">
+              Made to learn from your product videos and documents
+            </h3>
+            <p className="text-gray-600 text-lg max-w-md">
+              Upload all your product videos and tutorials and distribute it
+              directly to the right user. Users get to see what matters for
+              them.
+            </p>
+          </div>
+
+          <div className="w-full grid grid-cols-12 relative max-w-4xl  h-[400px] mx-auto text-center mt-12">
+            <div className="absolute top-0 left-0 w-full h-[400px] flex justify-center items-center z-0">
+              <FlowLinesA className="w-full h-full" />
+            </div>
+
+            <div className="col-span-4 flex flex-col z-10 h-full  justify-between py-10">
+              {inputStuff.map((item, index) => (
+                <div
+                  key={item}
+                  className="w-full flex"
+                  style={{ marginLeft: `${inputStuffPosition[index]}%` }}
+                >
+                  <div className=" font-semibold px-6 py-2 bg-fuchsia-50 text-fuchsia-900 border border-fuchsia-200 rounded-lg mt-2">
+                    {item}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="col-span-4 h-full flex justify-center items-center z-10 relative">
+              <div className="z-10 shadow-[0_0_12px_rgba(138,56,245,0.34)] w-[180px] h-[180px] rounded-full bg-fuchsia-50 flex justify-center items-center flex-col ">
+                <Image
+                  src="/logoIconOnly.svg"
+                  alt="Knolbase Logo"
+                  width={200}
+                  height={200}
+                  className="w-14 h-14"
+                />
+                <p className="text-gray-700 font-bold mt-2">AI Agent</p>
+              </div>
+
+              <div
+                style={{
+                  background: "#39989A",
+                  background:
+                    "linear-gradient(90deg,rgba(57, 152, 154, 1) 11%, rgba(149, 121, 194, 1) 50%, rgba(240, 147, 147, 1) 100%)",
+                }}
+                className="absolute w-[180px] h-[180px] rounded-full blur-xl rotate-0 animate-spin opacity-60 duration-[40s]"
+              ></div>
+            </div>
+
+            <div className="col-span-4 z-50 flex flex-col h-full  justify-between py-10">
+              {outputStuff.map((item, index) => (
+                <div
+                  key={item}
+                  className="w-full flex justify-end"
+                  style={{ paddingRight: `${outputStuffPosition[index]}%` }}
+                >
+                  <div className=" font-semibold px-6 py-2 bg-fuchsia-800 text-white border border-fuchsia-200 rounded-lg mt-2">
+                    {item}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+};
+
+const ScreenTypesSection = () => {
+  const screenTypes = [
+    {
+      title: "Personalised User Portal All Users",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      image: "/images/person-screenshot-01-3x.png",
+    },
+    {
+      title: "In App Widget",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      image: "/images/in-app-screenshot--01-3x.png",
+    },
+  ];
+  return (
+    <section id="screen-types" className="border-t border-b border-gray-200 ">
+      <Container>
+        <div className="flex justify-between gap-8">
+          {screenTypes.map((screenType) => (
+            <div
+              key={screenType.title}
+              className="flex-1 outline-1 outline-gray-200 flex flex-col"
+            >
+              <div className="w-full add-border-page-full relative">
+                <Image
+                  src={screenType.image}
+                  alt={screenType.title}
+                  width={1800}
+                  height={1800}
+                  className="w-full h-full object-cover border-gray-200 "
+                />
+              </div>
+
+              <div className="py-5 px-4 border-b border-gray-200">
+                <h3 className="text-xl font-semibold text-gray-700">
+                  {screenType.title}
+                </h3>
+              </div>
+              <div className="py-5 px-4">
+                <p className="text-gray-500">{screenType.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+};
+
+const StepsSection = () => {
+  const stepsArr = [
+    {
+      title: "Customers",
+      description:
+        "Add your customer into knolbase, add basic information like name, POC, logo etc.",
+      image: "/images/step-1.png",
+    },
+    {
+      title: "Persona",
+      description:
+        "Add user persona or profile who will be using your software from the customer",
+      image: "/images/step-2.png",
+    },
+    {
+      title: "Guides",
+      description:
+        "Use Knolbase AI to generate guides to for the persona in minutes",
+      image: "/images/step-3.png",
+    },
+    {
+      title: "Users",
+      description:
+        "Upload the users via Spreadsheets, CSV or via API to knolbase",
+      image: "/images/step-4.png",
+    },
+    {
+      title: "Deploy",
+      description:
+        "Send personalised portal link to all your users via email or any communication mode",
+      image: "/images/step-5.png",
+    },
+  ];
+  return (
+    <section id="stepsSection" className="border-t border-b border-gray-200">
+      <Container>
+        <div className="w-full grid grid-cols-10 gap-2">
+          {stepsArr.map((step, index) => (
+            <div className="col-span-2 flex flex-col items-center justify-center add-border-page-full pt-12">
+              <div className="text-sm text-gray-600 font-medium px-4 py-2 border border-gray-200 mb-6">
+                Step {index + 1}
+              </div>
+
+              <div className="w-2 h-2 bg-gray-900 -mb-1 z-10"></div>
+            </div>
+          ))}
+        </div>
+      </Container>
+
+      <Container>
+        <div className="w-full grid grid-cols-10 gap-2">
+          {stepsArr.map((step, index) => (
+            <div
+              className={`col-span-2 flex flex-col bg-gray-50 border-l border-r border-gray-200 ${
+                index === 0 ? "border-l-0" : ""
+              } ${index === stepsArr.length - 1 ? "border-r-0" : ""}`}
+            >
+              <div className="pl-6 pr-4 pt-6 h-[200px]">
+                <h4 className="text-xl font-semibold text-gray-700 mb-1">
+                  {step.title}
+                </h4>
+                <p className="text-gray-500">{step.description}</p>
+              </div>
+
+              <div className="h-[150px]">
+                <Image
+                  src={step.image}
+                  alt={step.title}
+                  width={100}
+                  height={100}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+};
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <MainLayout title="Home">
+      <Header />
+      <MainHero />
+      <Hero2Section />
+
+      <StepsSection />
+
+      <AIAgentAnimationSection />
+      <ScreenTypesSection />
+
+      <div className="h-[1000000px]">asdasd</div>
+    </MainLayout>
   );
 }

@@ -1,0 +1,19 @@
+.bg-glass-frosting {
+  background: url("/images/gradient-block-transparent-stuff.svg");
+  background-position: 50% 0;
+  background-size: 3rem;
+}
+
+.add-border-page-full {
+}
+
+.add-border-page-full::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  @apply bg-gray-200;
+}
