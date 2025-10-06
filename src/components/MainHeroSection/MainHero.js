@@ -3,7 +3,21 @@ import Container from "../LayoutBlocks/Container";
 import HeroBackgroundFrosting from "./HeroBackgroundFrosting";
 import Image from "next/image";
 import SideBlockAnimation from "./SideBlockAnimation";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
+
 const MainHero = () => {
+  const heroScreenRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      heroScreenRef.current,
+      { scale: 0.9, opacity: 0.4 },
+      { scale: 1, duration: 0.5, opacity: 1, ease: "power4.inOut" }
+    );
+  });
+
   return (
     <div className="w-full mt-12">
       <Container sideBorder={false} paddedSides={false}>
@@ -51,9 +65,24 @@ const MainHero = () => {
             </div>
           </div>
         </div>
-
-        <div className="absolute top-0 right-0 lg:w-[700px] md:w-[500px] w-[400px] h-[600px] ">
+        {/* 
+        <div className="z-50 absolute top-0 right-0 lg:w-[700px] md:w-[500px] w-[400px] h-[600px] ">
           <SideBlockAnimation />
+        </div> */}
+
+        <div
+          ref={heroScreenRef}
+          className="z-40 absolute -right-200 -top-40 w-[1280px] h-[800px] rounded-b-3xl shadow-2xl outline-8 outline-fuchsia-800/10"
+          style={{
+            backgroundImage: `url('/images/dummy-webpage.svg')`,
+            backgroundPosition: "left bottom",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+        >
+          <div className="z-50 absolute bottom-0 left-0 lg:w-[700px] md:w-[500px] w-[400px] h-[600px] ">
+            <SideBlockAnimation />
+          </div>
         </div>
       </Container>
     </div>

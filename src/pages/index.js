@@ -6,6 +6,11 @@ import MainHero from "@/components/MainHeroSection/MainHero";
 import MainLayout from "@/components/MainLayout";
 import Image from "next/image";
 
+import gsap from "gsap";
+import { GSDevTools } from "gsap/dist/GSDevTools";
+
+gsap.registerPlugin(GSDevTools);
+
 const Hero2Section = () => {
   return (
     <section id="hero2" className="w-full border-t border-b border-gray-200 ">
