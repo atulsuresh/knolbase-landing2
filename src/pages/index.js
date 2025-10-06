@@ -83,7 +83,7 @@ const AIAgentAnimationSection = () => {
               <FlowLinesA className="w-full h-full" />
             </div>
 
-            <div className="col-span-4 flex flex-col z-10 h-full  justify-between py-10">
+            <div className="col-span-4 flex flex-col z-20 h-full md:text-base text-sm justify-between py-10">
               {inputStuff.map((item, index) => (
                 <div
                   key={index}
@@ -98,15 +98,17 @@ const AIAgentAnimationSection = () => {
             </div>
 
             <div className="col-span-4 h-full flex justify-center items-center z-10 relative">
-              <div className="z-10 shadow-[0_0_12px_rgba(138,56,245,0.34)] w-[180px] h-[180px] rounded-full bg-fuchsia-50 flex justify-center items-center flex-col ">
+              <div className="z-10 shadow-[0_0_12px_rgba(138,56,245,0.34)] md:w-[180px] md:h-[180px] w-[120px] h-[120px] rounded-full bg-fuchsia-50 flex justify-center items-center flex-col ">
                 <Image
                   src="/logoIconOnly.svg"
                   alt="Knolbase Logo"
                   width={200}
                   height={200}
-                  className="w-14 h-14"
+                  className="md:w-14 md:h-14 w-10 h-10"
                 />
-                <p className="text-gray-700 font-bold mt-2">AI Agent</p>
+                <p className="text-gray-700 md:text-base text-xs font-bold mt-2">
+                  AI Agent
+                </p>
               </div>
 
               <div
@@ -115,11 +117,11 @@ const AIAgentAnimationSection = () => {
                   background:
                     "linear-gradient(90deg,rgba(57, 152, 154, 1) 11%, rgba(149, 121, 194, 1) 50%, rgba(240, 147, 147, 1) 100%)",
                 }}
-                className="absolute w-[180px] h-[180px] rounded-full blur-xl rotate-0 animate-spin opacity-60 duration-[40s]"
+                className="absolute md:w-[180px] md:h-[180px] w-[120px] h-[120px] rounded-full blur-xl rotate-0 animate-spin opacity-60 duration-[40s]"
               ></div>
             </div>
 
-            <div className="col-span-4 z-50 flex flex-col h-full  justify-between py-10">
+            <div className="col-span-4 z-50 flex flex-col h-full  md:text-base text-sm justify-between py-10">
               {outputStuff.map((item, index) => (
                 <div
                   key={index}
@@ -157,7 +159,7 @@ const ScreenTypesSection = () => {
   return (
     <section id="screen-types" className="border-t border-b border-gray-200 ">
       <Container>
-        <div className="flex justify-between gap-8">
+        <div className="md:flex justify-between gap-8">
           {screenTypes.map((screenType, index) => (
             <div
               key={index}
@@ -225,7 +227,7 @@ const StepsSection = () => {
   return (
     <section id="stepsSection" className="border-t border-b border-gray-200">
       <Container>
-        <div className="w-full grid grid-cols-10 gap-2">
+        <div className="w-full md:grid grid-cols-10 gap-2 hidden">
           {stepsArr.map((step, index) => (
             <div
               key={index}
@@ -242,11 +244,11 @@ const StepsSection = () => {
       </Container>
 
       <Container>
-        <div className="w-full grid grid-cols-10 gap-2">
+        <div className="w-full grid grid-cols-10 md:gap-2">
           {stepsArr.map((step, index) => (
             <div
               key={index}
-              className={`col-span-2 flex flex-col bg-gray-50 border-l border-r border-gray-200 ${
+              className={`md:col-span-2 col-span-12 border-b md:border-b-0 flex flex-col bg-gray-50 md:border-l md:border-r border-gray-200 ${
                 index === 0 ? "border-l-0" : ""
               } ${index === stepsArr.length - 1 ? "border-r-0" : ""}`}
             >
@@ -257,7 +259,7 @@ const StepsSection = () => {
                 <p className="text-gray-500">{step.description}</p>
               </div>
 
-              <div className="h-[150px]">
+              <div className="md:h-[150px] hidden md:block">
                 <Image
                   src={step.image}
                   alt={step.title}

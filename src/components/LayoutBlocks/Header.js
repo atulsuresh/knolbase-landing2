@@ -39,7 +39,7 @@ const Header = () => {
             />
           </div>
           <div>
-            <ul className="flex items-center gap-10">
+            <ul className=" items-center gap-10 hidden md:flex">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <Link

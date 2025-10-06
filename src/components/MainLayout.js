@@ -8,7 +8,7 @@ const instrumentSans = Instrument_Sans({
 const MainLayout = ({ children, title }) => {
   return (
     <div className={` ${instrumentSans.className}`}>
-      <main className="relative">{children}</main>
+      <main className="relative overflow-x-hidden">{children}</main>
     </div>
   );
 };

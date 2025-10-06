@@ -1065,7 +1065,10 @@ const SideBlockAnimation = () => {
   });
   return (
     <div className="w-full h-full relative">
-      <div ref={WidgetAreaRef} className="absolute bottom-8 left-20 shadow-2xl">
+      <div
+        ref={WidgetAreaRef}
+        className="absolute md:bottom-8 md:left-20 -left-4 -bottom-10 shadow-2xl"
+      >
         <WidgetArea />
       </div>
     </div>
