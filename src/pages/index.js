@@ -21,8 +21,8 @@ const Hero2Section = () => {
               A way to transform your onboarding
             </h3>
             <p className="text-gray-600 text-lg max-w-md">
-              Platform for modern product teams to deliver personalized,
-              AI-driven training so every user persona reaches value—fast.
+              Ship onboarding that adapts. AI tailors training to each persona,
+              role, and workflow for faster value.
             </p>
           </div>
         </div>
@@ -144,13 +144,13 @@ const ScreenTypesSection = () => {
     {
       title: "Personalised User Portal All Users",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "Give each user a portal tailored to their role, tasks, and workflows. ",
       image: "/images/person-screenshot-01-3x.png",
     },
     {
       title: "In App Widget",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        "Embed guided help directly inside your product for just‑in‑time answers. ",
       image: "/images/in-app-screenshot--01-3x.png",
     },
   ];
@@ -285,11 +285,49 @@ export default function Home() {
       <AIAgentAnimationSection />
       <ScreenTypesSection />
 
+      <div className="">
+        <Container>
+          <div className="py-24 border-b border-gray-200 bg-gray-50">
+            <div className="max-w-lg mx-auto py-12 text-base text-gray-500 bg-white px-12">
+              <p>
+                Making a product self serve is a dream for many product
+                builders.
+                <br></br> <br></br>
+                But the sad reality is majority of the software sold to
+                enterprises are complex, solving many problems at once and
+                mostly build without a lot of user context.
+                <br></br> <br></br>
+                This created a crippling problem where software company spend a
+                lot of time training users on how to get their jobs done.
+                <br></br> <br></br>
+                Whether they are new customers or existing ones, SaaS companies
+                spend a lot of time on training users therefore spending more
+                money on human capital.
+                <br></br> <br></br>
+                Knolbase's goal is to help software companies train users in the
+                fastest way.
+              </p>
+              <div>
+                <Image
+                  className="w-24 h-24 -ml-3 mt-2 mix-blend-darken"
+                  src="/images/athulsign.png"
+                  alt="Athul Sign"
+                  width={100}
+                  height={100}
+                />
+                <div>Athul Suresh</div>
+                <div>Founder, Knolbase</div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </div>
+
       <div className="w-full h-[50px] fixed bottom-0 left-0 bg-red-800 text-center flex items-center justify-center text-white font-medium text-lg z-100">
         Website is still under development
       </div>
 
-      {/* <div className="h-[1000000px]">asdasd</div> */}
+      <div className="h-[200px]">.</div>
     </MainLayout>
   );
 }

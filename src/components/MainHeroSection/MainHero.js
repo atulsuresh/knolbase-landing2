@@ -36,10 +36,10 @@ const MainHero = () => {
 
               <div className="mt-7">
                 <Link
-                  href="/"
+                  href="https://tally.so/r/3EdE7q"
                   className="text-sm inline-block text-center font-semibold text-white bg-black px-6 py-4 rounded-full hover:bg-gray-900"
                 >
-                  Get Started
+                  Join Waitlist
                 </Link>
               </div>
             </div>
