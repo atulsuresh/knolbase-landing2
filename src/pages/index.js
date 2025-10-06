@@ -78,19 +78,19 @@ const AIAgentAnimationSection = () => {
             </p>
           </div>
 
-          <div className="w-full grid grid-cols-12 relative max-w-4xl  h-[400px] mx-auto text-center mt-12">
-            <div className="absolute top-0 left-0 w-full h-[400px] flex justify-center items-center z-0">
+          <div className="w-full grid grid-cols-12 relative max-w-4xl  md:h-[400px] h-[250px] mx-auto text-center mt-12">
+            <div className="absolute top-0 left-0 w-full md:h-[400px] h-[350px] flex justify-center items-center z-0">
               <FlowLinesA className="w-full h-full" />
             </div>
 
-            <div className="col-span-4 flex flex-col z-20 h-full md:text-base text-sm justify-between py-10">
+            <div className="col-span-4 flex flex-col z-20 h-full md:text-base text-xs justify-between md:py-10 py-24">
               {inputStuff.map((item, index) => (
                 <div
                   key={index}
                   className="w-full flex"
                   style={{ marginLeft: `${inputStuffPosition[index]}%` }}
                 >
-                  <div className=" font-semibold px-6 py-2 bg-fuchsia-50 text-fuchsia-900 border border-fuchsia-200 rounded-lg mt-2">
+                  <div className=" font-semibold md:py-2 px-2 py-1 bg-fuchsia-50 text-fuchsia-900 border border-fuchsia-200 rounded-lg mt-2">
                     {item}
                   </div>
                 </div>
@@ -98,7 +98,7 @@ const AIAgentAnimationSection = () => {
             </div>
 
             <div className="col-span-4 h-full flex justify-center items-center z-10 relative">
-              <div className="z-10 shadow-[0_0_12px_rgba(138,56,245,0.34)] md:w-[180px] md:h-[180px] w-[120px] h-[120px] rounded-full bg-fuchsia-50 flex justify-center items-center flex-col ">
+              <div className="z-10 shadow-[0_0_12px_rgba(138,56,245,0.34)] md:w-[180px] md:h-[180px] w-[100px] h-[100px] rounded-full bg-fuchsia-50 flex justify-center items-center flex-col ">
                 <Image
                   src="/logoIconOnly.svg"
                   alt="Knolbase Logo"
@@ -121,14 +121,14 @@ const AIAgentAnimationSection = () => {
               ></div>
             </div>
 
-            <div className="col-span-4 z-50 flex flex-col h-full  md:text-base text-sm justify-between py-10">
+            <div className="col-span-4 z-50 flex flex-col h-full  md:text-base text-xs justify-between md:py-10 py-24">
               {outputStuff.map((item, index) => (
                 <div
                   key={index}
                   className="w-full flex justify-end"
                   style={{ paddingRight: `${outputStuffPosition[index]}%` }}
                 >
-                  <div className=" font-semibold px-6 py-2 bg-fuchsia-800 text-white border border-fuchsia-200 rounded-lg mt-2">
+                  <div className=" font-semibold md:px-6 md:py-2 px-2 py-1 bg-fuchsia-800 text-white border border-fuchsia-200 rounded-lg mt-2">
                     {item}
                   </div>
                 </div>
