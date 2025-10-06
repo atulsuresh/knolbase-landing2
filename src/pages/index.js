@@ -285,7 +285,11 @@ export default function Home() {
       <AIAgentAnimationSection />
       <ScreenTypesSection />
 
-      <div className="h-[1000000px]">asdasd</div>
+      <div className="w-full h-[50px] fixed bottom-0 left-0 bg-red-800 text-center flex items-center justify-center text-white font-medium text-lg z-100">
+        Website is still under development
+      </div>
+
+      {/* <div className="h-[1000000px]">asdasd</div> */}
     </MainLayout>
   );
 }

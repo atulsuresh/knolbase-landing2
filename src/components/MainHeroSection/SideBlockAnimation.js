@@ -709,6 +709,7 @@ const WidgetArea = () => {
           },
           "<"
         )
+
         .to(chatLayoutSectionRef.current, {
           height: 0,
           x: 0,
@@ -717,21 +718,21 @@ const WidgetArea = () => {
           ease: "power3.out",
           delay: 5,
         })
-        .add(videoTutorialAnimation())
-        .to(videoTutorialRef.current, {
-          opacity: 0,
-          autoAlpha: 0,
-          scaleY: 0,
-          y: -20,
-          height: 0,
-          duration: 0.5,
-          stagger: 0.05,
-          ease: "power3.out",
-          delay: 10,
-        })
+        // .add(videoTutorialAnimation())
+        // .to(videoTutorialRef.current, {
+        //   opacity: 0,
+        //   autoAlpha: 0,
+        //   scaleY: 0,
+        //   y: -20,
+        //   height: 0,
+        //   duration: 0.5,
+        //   stagger: 0.05,
+        //   ease: "power3.out",
+        //   delay: 10,
+        // })
         .add(backToOnboarding(), "<");
 
-      masterTimeline.timeScale(1);
+      masterTimeline.timeScale(2);
 
       // .add(aiAskAreaAnimationForQuestionOnboarding, ">");
       // masterTimeline.add(videoTutorialAnimation());
