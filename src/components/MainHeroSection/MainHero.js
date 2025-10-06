@@ -49,6 +49,7 @@ const MainHero = () => {
             {/* <div className="absolute top-0 right-0 w-full h-full bg-glass-frosting"></div> */}
             <Image
               src="/images/image2.jpg"
+              alt="Hero Background"
               width={100}
               height={100}
               className="object-cover absolute top-0 left-0 w-full h-full opacity-20 blur-sm"

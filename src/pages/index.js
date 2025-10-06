@@ -306,8 +306,8 @@ export default function Home() {
                 spend a lot of time on training users therefore spending more
                 money on human capital.
                 <br></br> <br></br>
-                Knolbase's goal is to help software companies train users in the
-                fastest way.
+                Knolbase&apos;s goal is to help software companies train users
+                in the fastest way.
               </p>
               <div>
                 <Image
