@@ -5,6 +5,7 @@ import HeroBackgroundFrosting from "@/components/MainHeroSection/HeroBackgroundF
 import MainHero from "@/components/MainHeroSection/MainHero";
 import MainLayout from "@/components/MainLayout";
 import Image from "next/image";
+import { NextSeo } from "next-seo";
 
 import gsap from "gsap";
 import { GSDevTools } from "gsap/dist/GSDevTools";
@@ -276,60 +277,134 @@ const StepsSection = () => {
 };
 
 export default function Home() {
+  const seoConfig = {
+    title:
+      "Knolbase - AI-Powered Onboarding Platform | Transform Product Training",
+    description:
+      "Transform your product onboarding with AI. Upload videos and docs, get personalized user portals and in-app widgets. Reduce training time and costs for SaaS companies.",
+    canonical: "https://knolbase.com",
+    openGraph: {
+      type: "website",
+      locale: "en_US",
+      url: "https://knolbase.com",
+      siteName: "Knolbase",
+      title: "Knolbase - AI-Powered Onboarding Platform",
+      description:
+        "Transform your product onboarding with AI. Upload videos and docs, get personalized user portals and in-app widgets.",
+      images: [
+        {
+          url: "https://knolbase.com/knolbase-logo.svg",
+          width: 1200,
+          height: 630,
+          alt: "Knolbase - AI-Powered Onboarding Platform",
+        },
+      ],
+    },
+    twitter: {
+      handle: "@knolbase",
+      site: "@knolbase",
+      cardType: "summary_large_image",
+    },
+    additionalMetaTags: [
+      {
+        name: "keywords",
+        content:
+          "AI onboarding, product training, user onboarding, SaaS training, personalized portals, in-app widgets, video tutorials, documentation, user experience, customer success",
+      },
+      {
+        name: "author",
+        content: "Athul Suresh, Knolbase",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "googlebot",
+        content: "index, follow",
+      },
+      {
+        property: "article:author",
+        content: "Athul Suresh",
+      },
+      {
+        property: "article:section",
+        content: "Technology",
+      },
+      {
+        property: "article:tag",
+        content: "AI, Onboarding, SaaS, Training",
+      },
+    ],
+    additionalLinkTags: [
+      {
+        rel: "icon",
+        href: "/favicon.ico",
+      },
+      {
+        rel: "apple-touch-icon",
+        href: "/favicon.ico",
+      },
+    ],
+  };
+
   return (
-    <MainLayout title="Home">
-      <Header />
-      <MainHero />
-      <Hero2Section />
+    <>
+      <NextSeo {...seoConfig} />
+      <MainLayout title="Home">
+        <Header />
+        <MainHero />
+        <Hero2Section />
 
-      <StepsSection />
+        <StepsSection />
 
-      <AIAgentAnimationSection />
-      <ScreenTypesSection />
+        <AIAgentAnimationSection />
+        <ScreenTypesSection />
 
-      <div className="">
-        <Container>
-          <div className="py-24 border-b border-gray-200 bg-gray-50">
-            <div className="max-w-lg mx-auto py-12 text-base text-gray-500 bg-white px-12">
-              <p>
-                Making a product self serve is a dream for many product
-                builders.
-                <br></br> <br></br>
-                But the sad reality is majority of the software sold to
-                enterprises are complex, solving many problems at once and
-                mostly build without a lot of user context.
-                <br></br> <br></br>
-                This created a crippling problem where software company spend a
-                lot of time training users on how to get their jobs done.
-                <br></br> <br></br>
-                Whether they are new customers or existing ones, SaaS companies
-                spend a lot of time on training users therefore spending more
-                money on human capital.
-                <br></br> <br></br>
-                Knolbase&apos;s goal is to help software companies train users
-                in the fastest way.
-              </p>
-              <div>
-                <Image
-                  className="w-24 h-24 -ml-3 mt-2 mix-blend-darken"
-                  src="/images/athulsign.png"
-                  alt="Athul Sign"
-                  width={100}
-                  height={100}
-                />
-                <div>Athul Suresh</div>
-                <div>Founder, Knolbase</div>
+        <div className="">
+          <Container>
+            <div className="py-24 border-b border-gray-200 bg-gray-50">
+              <div className="max-w-lg mx-auto py-12 text-base text-gray-500 bg-white px-12">
+                <p>
+                  Making a product self serve is a dream for many product
+                  builders.
+                  <br></br> <br></br>
+                  But the sad reality is majority of the software sold to
+                  enterprises are complex, solving many problems at once and
+                  mostly build without a lot of user context.
+                  <br></br> <br></br>
+                  This created a crippling problem where software company spend
+                  a lot of time training users on how to get their jobs done.
+                  <br></br> <br></br>
+                  Whether they are new customers or existing ones, SaaS
+                  companies spend a lot of time on training users therefore
+                  spending more money on human capital.
+                  <br></br> <br></br>
+                  Knolbase&apos;s goal is to help software companies train users
+                  in the fastest way.
+                </p>
+                <div>
+                  <Image
+                    className="w-24 h-24 -ml-3 mt-2 mix-blend-darken"
+                    src="/images/athulsign.png"
+                    alt="Athul Sign"
+                    width={100}
+                    height={100}
+                  />
+                  <div>Athul Suresh</div>
+                  <div>Founder, Knolbase</div>
+                </div>
               </div>
             </div>
-          </div>
-        </Container>
-      </div>
+          </Container>
+        </div>
 
-      <div className="w-full h-[50px] fixed bottom-0 left-0 bg-red-800 text-center flex items-center justify-center text-white font-medium text-lg z-100">
-        Website is still under development
-      </div>
+        <div className="w-full h-[50px] fixed bottom-0 left-0 bg-red-800 text-center flex items-center justify-center text-white font-medium text-lg z-100">
+          Website is still under development
+        </div>
 
-      <div className="h-[200px]">.</div>
-    </MainLayout>
+        <div className="h-[200px]">.</div>
+      </MainLayout>
+    </>
   );
 }
