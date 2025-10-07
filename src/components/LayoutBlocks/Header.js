@@ -26,7 +26,7 @@ const navItems = [
 ];
 const Header = () => {
   return (
-    <section className="w-full sticky top-0 z-100 bg-white/50 backdrop-blur-sm border-b border-gray-200">
+    <section className="w-full fixed top-0 z-100 bg-white/50 backdrop-blur-sm border-b border-gray-200">
       <Container paddedSides>
         <div className="py-6 flex items-center justify-between">
           <div className="text-2xl font-bold">

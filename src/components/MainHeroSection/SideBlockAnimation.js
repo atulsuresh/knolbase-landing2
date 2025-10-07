@@ -732,7 +732,7 @@ const WidgetArea = () => {
         // })
         .add(backToOnboarding(), "<");
 
-      masterTimeline.timeScale(2);
+      // masterTimeline.timeScale(2);
 
       // .add(aiAskAreaAnimationForQuestionOnboarding, ">");
       // masterTimeline.add(videoTutorialAnimation());

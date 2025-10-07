@@ -22,10 +22,10 @@ const MainHero = () => {
     <div className="w-full mt-12">
       <Container sideBorder={false} paddedSides={false}>
         <div className="w-full py-12">
-          <div className="w-full relative bg-fuchsia-100 rounded-xl outline-8 outline-fuchsia-50 p-3 grid grid-cols-12 gap-2  md:h-[500px] h-[400px] max-h-screen">
+          <div className="w-full relative bg-fuchsia-100 rounded-b-xl outline-8 outline-fuchsia-50 p-3 grid grid-cols-12 gap-2  md:h-[500px] h-[400px] max-h-screen">
             <div className="md:col-span-5 col-span-12 flex justify-end flex-col h-full pl-6 pb-6 z-50">
               <div>
-                <h1 className="md:text-5xl text-3xl font-bold mb-5">
+                <h1 className="md:text-5xl text-[#500055] text-3xl font-bold mb-5">
                   AI onboarding for your product.
                 </h1>
                 <h2 className="md:text-lg text-base font-normal text-gray-700">
