@@ -1,53 +1,16 @@
 import FlowLinesA from "@/components/FlowLinesA";
 import Container from "@/components/LayoutBlocks/Container";
 import Header from "@/components/LayoutBlocks/Header";
-import HeroBackgroundFrosting from "@/components/MainHeroSection/HeroBackgroundFrosting";
+// import HeroBackgroundFrosting from "@/components/MainHeroSection/HeroBackgroundFrosting";
 import MainHero from "@/components/MainHeroSection/MainHero";
 import MainLayout from "@/components/MainLayout";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
-
+import Hero2Section from "@/components/LayoutBlocks/Hero2Section";
 import gsap from "gsap";
 import { GSDevTools } from "gsap/dist/GSDevTools";
 
 gsap.registerPlugin(GSDevTools);
-
-const Hero2Section = () => {
-  return (
-    <section id="hero2" className="w-full border-t border-b border-gray-200 ">
-      <Container>
-        <div className="w-full max-w-2xl mx-auto text-center relative z-50">
-          <div className=" flex flex-col items-center py-24">
-            <h3 className="text-3xl font-bold mb-2">
-              A way to transform your onboarding
-            </h3>
-            <p className="text-gray-600 text-lg max-w-md">
-              Ship onboarding that adapts. AI tailors training to each persona,
-              role, and workflow for faster value.
-            </p>
-          </div>
-        </div>
-
-        <div
-          className="absolute top-0 left-0 w-full h-full z-10"
-          style={{
-            backgroundImage: `url('/images/noise.svg')`,
-          }}
-        ></div>
-
-        <div
-          style={{
-            backgroundImage: `url('/images/im-stripe-2.jpg')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-          className="absolute top-0 left-0 w-full h-full bg-white"
-        ></div>
-      </Container>
-    </section>
-  );
-};
 
 const AIAgentAnimationSection = () => {
   const inputStuff = [
@@ -198,13 +161,15 @@ const StepsSection = () => {
       title: "Customers",
       description:
         "Add your customer into knolbase, add basic information like name, POC, logo etc.",
-      image: "/images/step-1.png",
+      image: "/images/customer-1.svg",
+      className: "m-8",
     },
     {
       title: "Persona",
       description:
         "Add user persona or profile who will be using your software from the customer",
-      image: "/images/step-2.png",
+      image: "/images/persona-1.svg",
+      className: "",
     },
     {
       title: "Guides",
@@ -253,19 +218,22 @@ const StepsSection = () => {
                 index === 0 ? "border-l-0" : ""
               } ${index === stepsArr.length - 1 ? "border-r-0" : ""}`}
             >
-              <div className="pl-6 pr-4 pt-6 h-[200px]">
+              <div className="pl-6 pr-4 pt-6 h-[180px]">
                 <h4 className="text-xl font-semibold text-gray-700 mb-1">
                   {step.title}
                 </h4>
                 <p className="text-gray-500">{step.description}</p>
               </div>
 
-              <div className="md:h-[150px] hidden md:block">
+              <div className="md:h-[150px] hidden md:flex md:items-center md:justify-center ">
                 <Image
                   src={step.image}
                   alt={step.title}
-                  width={100}
-                  height={100}
+                  width={200}
+                  height={200}
+                  className={`w-full object-cover ${
+                    step.className ? step.className : ""
+                  }`}
                 />
               </div>
             </div>
@@ -363,7 +331,15 @@ export default function Home() {
 
         <div className="">
           <Container>
-            <div className="py-24 border-b border-gray-200 bg-gray-50">
+            <div
+              style={{
+                backgroundImage: `url('/images/athul-background.webp')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+              className="py-24 border-b border-gray-200 bg-gray-50 "
+            >
               <div className="max-w-lg mx-auto py-12 text-base text-gray-500 bg-white px-12">
                 <p>
                   Making a product self serve is a dream for many product

@@ -59,7 +59,7 @@ const MainHero = () => {
 
           <div className="w-full grid grid-cols-12">
             <div className="md:col-span-7 col-span-12">
-              <h5 className="text-2xl font-bold text-gray-400 px-6 py-10 leading-8">
+              <h5 className="text-2xl font-bold text-gray-500 px-6 py-10 leading-8">
                 Create personalized onboarding experiences for your users with
                 AI that adapts to every persona, role, and workflow.
               </h5>
@@ -73,7 +73,7 @@ const MainHero = () => {
 
         <div
           ref={heroScreenRef}
-          className="z-40 md:absolute -right-200 -top-40 md:w-[1280px] md:h-[800px]  h-[500px] rounded-3xl shadow-2xl mb-12 md:mb-0 outline-8 outline-fuchsia-800/10"
+          className="z-40 md:absolute -right-200 -top-30 md:w-[1280px] md:h-[800px]  h-[500px] rounded-3xl shadow-2xl mb-12 md:mb-0 outline-8 outline-fuchsia-800/10"
           style={{
             backgroundImage: `url('/images/dummy-webpage.svg')`,
             backgroundPosition: "left bottom",

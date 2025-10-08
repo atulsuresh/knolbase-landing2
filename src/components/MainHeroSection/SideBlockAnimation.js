@@ -7,13 +7,15 @@ import SearchIcon from "../Icons/SearchIcon";
 import BigCursor from "../Icons/BigCursor";
 import ClockIcon from "../Icons/ClockIcon";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import Flip from "gsap/dist/Flip";
 import {
   ArrowTopRightOnSquareIcon,
   CheckCircleIcon,
   LinkIcon,
   PaperAirplaneIcon,
+  PlayCircleIcon,
 } from "@heroicons/react/24/solid";
-gsap.registerPlugin(SplitText, ScrollTrigger);
+gsap.registerPlugin(SplitText, ScrollTrigger, Flip);
 
 const BottomBarWrapper = ({ children }) => {
   return (
@@ -81,12 +83,8 @@ const WidgetArea = () => {
   const chatLayoutSectionRef = useRef(null);
   const onboardingFullSectionRef = useRef(null);
 
-  const aiAskEle = useRef({
-    inputContainer: null,
-    InputPlaceholder: null,
-    sampleQuestion: null,
-    sendButton: null,
-  });
+  const onboardingNextVideoThumbnailWrapperRef = useRef(null);
+  const onboardingNextVideoThumbnailRef = useRef(null);
 
   // AI Ask
   const aiAskInputContainerRef = useRef(null);
@@ -261,19 +259,7 @@ const WidgetArea = () => {
               ease: "power3.out",
             },
             "<"
-          )
-
-          .to(cursorRef.current, {
-            opacity: 1,
-            duration: 0.1,
-            ease: "power1.out",
-            delay: 4,
-          })
-
-          .to(cursorRef.current, {
-            x: 200,
-            y: 320,
-          });
+          );
 
         // .add(() => {
         //   cursorClickAnimationToElemet(aiAskInputContainerRef.current);
@@ -693,11 +679,79 @@ const WidgetArea = () => {
         return tl;
       }
 
+      function showVideoPlaybackOnOnboardingScreen() {
+        const tl = gsap.timeline({
+          onComplete: () => {
+            // const flipState = Flip.getState([
+            //   onboardingNextVideoThumbnailWrapperRef.current,
+            //   onboardingNextVideoThumbnailRef.current,
+            // ]);
+            // onboardingNextVideoThumbnailWrapperRef.current.classList.add(
+            //   "flex-col"
+            // );
+            // onboardingNextVideoThumbnailRef.current.classList.remove(
+            //   "w-[140px]"
+            // );
+            // onboardingNextVideoThumbnailRef.current.classList.remove(
+            //   "h-[105px]"
+            // );
+            // onboardingNextVideoThumbnailRef.current.classList.add("h-[260px]");
+            // Flip.from(flipState, {
+            //   duration: 0.5,
+            //   ease: "power4.inOut",
+            // });
+          },
+        });
+
+        tl.to(cursorRef.current, {
+          opacity: 1,
+          duration: 0.1,
+          ease: "power1.out",
+          delay: 2,
+        })
+          .to(cursorRef.current, {
+            x: 200,
+            y: 220,
+          })
+          .add(
+            cursorClickAnimationToElemet(
+              onboardingNextVideoThumbnailRef.current
+            )
+          )
+
+          .to(cursorRef.current, {
+            opacity: 0,
+            duration: 0.1,
+          });
+
+        // tl.to(onboardingNextVideoRef.current, {
+        //   scaleY: 1,
+        //   height: "auto",
+        //   duration: 2,
+        //   ease: "power3.out",
+        // });
+
+        return tl;
+      }
+
       let masterTimeline = gsap.timeline({
         repeat: -1,
         repeatDelay: 5,
       });
       masterTimeline.add(onboardingInitalAnimation());
+      masterTimeline.add(showVideoPlaybackOnOnboardingScreen());
+      masterTimeline
+        .to(
+          cursorRef.current,
+          {
+            opacity: 1,
+          },
+          "=+3"
+        )
+        .to(cursorRef.current, {
+          x: 200,
+          y: 540,
+        });
       masterTimeline
         .add(cursorClickAnimationToElemet(aiAskInputContainerRef.current))
 
@@ -780,23 +834,29 @@ const WidgetArea = () => {
                   Your Next Task
                 </span>
               </div>
-              <div className="w-full  flex flex-wrap">
+              <div
+                ref={onboardingNextVideoThumbnailWrapperRef}
+                className="w-full flex flex-wrap flex-col onboardingNextVideoThumbnailWrapper"
+              >
                 <div
-                  className="w-[140px] h-[105px] pl-3 pr-3 py-3"
+                  ref={onboardingNextVideoThumbnailRef}
+                  className=" h-[250px] pl-3 pr-3 py-3 onboardingNextVideoThumbnail"
                   // ref={(e) => (firstVideoAreaRef.current[index] = e)}
                 >
-                  <div className="w-full h-full rounded-xs bg-white"></div>
+                  <div className="w-full h-full rounded-xs bg-white flex items-center justify-center">
+                    <PlayCircleIcon className="w-8 text-black/90" />
+                  </div>
                 </div>
                 <div className="col-span-7 flex-1 min-w-[200px] pt-2 pb-3 pl-3 pr-2 text-white">
                   <div className="font-medium text-base">
                     Adding Employees to your Compliance Framework
                   </div>
-                  <div className="flex items-center mt-2">
+                  {/* <div className="flex items-center mt-2">
                     <span>
                       <ClockIcon />
                     </span>
                     <span className="text-sm font-normal ml-2">20 mins</span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -851,8 +911,12 @@ const WidgetArea = () => {
                   className="w-[140px] h-[105px] pl-3 pr-3 py-3"
                   // ref={(e) => (firstVideoAreaRef.current[index] = e)}
                 >
-                  <div className="w-full h-full rounded-xs bg-white"></div>
+                  {/*** Video Thumbnail  ***/}
+                  <div className="w-full h-full rounded-xs bg-white flex items-center justify-center">
+                    <PlayCircleIcon className="w-5 text-blue-500" />
+                  </div>
                 </div>
+
                 <div className="col-span-7 flex-1 min-w-[200px] pt-2 pb-3 pl-3 pr-2 text-white">
                   <div className="font-medium text-base">
                     Adding Employees to your Compliance Framework

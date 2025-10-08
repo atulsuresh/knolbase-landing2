@@ -1,0 +1,98 @@
+---
+alwaysApply: true
+---
+
+# About what we are building
+
+we are building a world class landing page for Knolbase.
+
+# 🧠 Knolbase — AI-Powered Onboarding & Training Platform for B2B Software Teams
+
+## 🎯 Context
+
+Knolbase helps **product and onboarding teams at B2B software companies** personalize user training at scale using AI.  
+It’s built for teams that manage **complex, multi-persona onboarding processes** where every customer account has different roles, workflows, and expectations.
+
+The platform automates the creation and delivery of **role-based, account-specific training experiences** so that users reach “time-to-value” faster — without requiring large manual onboarding teams.
+
+---
+
+## ⚙️ Problem
+
+Modern B2B products — especially in industries like healthcare, finance, or supply chain — face significant friction in user onboarding:
+
+- Onboarding teams rely on **manual training** (calls, sheets, docs, webinars).
+- Different **user personas** (admin, manager, operator, etc.) require different workflows.
+- Change management is a **major adoption blocker** — users resist or distrust new systems.
+- This leads to:
+  - Long implementation cycles
+  - High training backlog
+  - Poor personalization
+  - Increased support load
+  - Churn and missed revenue opportunities
+
+---
+
+## 💡 Solution: Knolbase
+
+Knolbase is an **AI layer for onboarding and training**, helping teams build **personalized learning experiences** for every account and user persona — automatically.
+
+### Key capabilities:
+
+- **AI Agents for Personalization**
+  - Automatically analyze account data and generate curated content per user persona.
+  - Offload research and content creation to AI “Account Research” and “User Research” agents.
+- **AI-Generated Training Portals**
+
+  - Each customer account gets a **personalized training portal**.
+  - Auto-generated video tutorials, task lists, and guides tailored to user roles.
+  - Progress tracking for both admins and end-users.
+
+- **In-App AI Widget**
+
+  - Embedded inside your software (web or desktop) — users never have to leave your product.
+  - AI chat assistant for contextual Q&A, step-by-step guidance, and progress nudges.
+
+- **Analytics & Feedback Loops**
+  - Real-time insights into training completion, user engagement, and blockers.
+  - Human-in-the-loop system lets onboarding managers intervene where AI can’t.
+
+---
+
+## 🔄 How It Works
+
+1. **Add a new customer account.**
+2. **Define user personas** and upload user lists.
+3. Knolbase **auto-generates role-based portals and training paths.**
+4. Users receive **personalized onboarding experiences** — videos, guides, and tasks.
+5. Progress is tracked live for both end-users and customer success managers.
+
+---
+
+## 🧩 Integration in Existing Workflow
+
+Knolbase fits seamlessly into the existing **customer onboarding journey**:
+Account Signed → Implementation Discovery → Data Migration → Testing → User Onboarding → Training → Go Live → Value Delivery → Success
+
+It enhances the **User Onboarding** and **Training** stages with AI-driven personalization, reducing human overhead and accelerating adoption.
+
+---
+
+## 🚀 Outcomes
+
+- Reduce onboarding time by 60–70%.
+- Increase user activation and product adoption.
+- Lower support ticket volume.
+- Enable smaller teams to handle more accounts.
+- Deliver measurable value to every user, faster.
+
+---
+
+## 🧭 Positioning Summary
+
+**Knolbase = AI Copilot for Product & Onboarding Teams**  
+Empowering B2B SaaS companies to:
+
+- Scale customer training without scaling headcount
+- Turn onboarding into a self-optimizing, data-driven process
+- Build trust and engagement through personalized learning experiences
