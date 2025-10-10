@@ -302,18 +302,18 @@ export default function Home() {
       "Knolbase - AI-Powered Onboarding Platform | Transform Product Training",
     description:
       "Transform your product onboarding with AI. Upload videos and docs, get personalized user portals and in-app widgets. Reduce training time and costs for SaaS companies.",
-    canonical: "https://knolbase.com",
+    canonical: "https://www.knolbase.com",
     openGraph: {
       type: "website",
       locale: "en_US",
-      url: "https://knolbase.com",
+      url: "https://www.knolbase.com",
       siteName: "Knolbase",
       title: "Knolbase - AI-Powered Onboarding Platform",
       description:
         "Transform your product onboarding with AI. Upload videos and docs, get personalized user portals and in-app widgets.",
       images: [
         {
-          url: "https://knolbase.com/knolbase-logo.svg",
+          url: "https://www.knolbase.com/knolbase-logo.svg",
           width: 1200,
           height: 630,
           alt: "Knolbase - AI-Powered Onboarding Platform",
