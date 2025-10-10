@@ -25,6 +25,7 @@ const navItems = [
   // },
   {
     label: "Login",
+    login: true,
     href: "https://app.knolbase.com",
   },
 ];
@@ -49,6 +50,7 @@ const Header = () => {
                   <Link
                     className="font-medium text-base text-gray-500 hover:text-gray-700"
                     href={item.href}
+                    rel={item.login ? "nofollow" : ""}
                   >
                     {item.label}
                   </Link>
