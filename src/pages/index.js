@@ -397,9 +397,56 @@ export default function Home() {
 
         <FoundersNoteSection />
 
-        <div className=" bg-black">
-          <Container sideBorder={false}>
-            <div className="flex justify-between w-full py-12  h-[200px]">
+        <div className="border-t border-gray-200">
+          <Container>
+            <div className="py-12"></div>
+          </Container>
+        </div>
+
+        <footer className=" bg-black">
+          <div className="border-b border-gray-700">
+            <Container
+              sideBorder={false}
+              sideDarkBoard={true}
+              paddedSides={true}
+            >
+              <div className="grid grid-cols-12">
+                <div className="w-full py-12 col-span-4">
+                  <div className="flex items-center">
+                    <Image
+                      src="/logoIconOnly.svg"
+                      alt="Knolbase"
+                      width={40}
+                      height={40}
+                    />
+                    <span className="text-gray-100 text-xl font-bold ml-2">
+                      Knolbase
+                    </span>
+                  </div>
+
+                  <div className="text-white text-3xl font-medium mt-4 leading-relaxed">
+                    What’s stopping you from creating success for all your
+                    users?
+                  </div>
+                </div>
+
+                <div className="col-span-8 flex justify-end items-center">
+                  <a
+                    href="https://tally.so/r/3EdE7q"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white font-semibold bg-gray-900 px-6 py-4 rounded-full hover:bg-gray-800 border border-gray-700"
+                  >
+                    Join Waitlist
+                  </a>
+                </div>
+              </div>
+            </Container>
+          </div>
+
+          {/* Footer */}
+          <Container sideBorder={false} sideDarkBoard={true} paddedSides={true}>
+            <div className="flex justify-between w-full py-12">
               <div className="flex-1 flex items-center justify-center">
                 <span className="text-xs text-gray-400 w-full">
                   © 2025{" "}
@@ -430,7 +477,7 @@ export default function Home() {
               </div>
             </div>
           </Container>
-        </div>
+        </footer>
 
         {/* <div className="w-full h-[50px] fixed bottom-0 left-0 bg-red-800 text-center flex items-center justify-center text-white font-medium text-lg z-100">
           Website is still under development

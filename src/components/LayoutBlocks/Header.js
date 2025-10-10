@@ -1,24 +1,28 @@
 import Container from "./Container";
 import Link from "next/link";
 import Image from "next/image";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useRef, useEffect } from "react";
 
 const navItems = [
-  {
-    label: "Product for Onboarding",
-    href: "/",
-  },
-  {
-    label: "Onboarding Solutions",
-    href: "/",
-  },
-  {
-    label: "About",
-    href: "/",
-  },
-  {
-    label: "Pricing",
-    href: "/",
-  },
+  // {
+  //   label: "Product for Onboarding",
+  //   href: "/",
+  // },
+  // {
+  //   label: "Onboarding Solutions",
+  //   href: "/",
+  // },
+  // {
+  //   label: "About",
+  //   href: "/",
+  // },
+  // {
+  //   label: "Pricing",
+  //   href: "/",
+  // },
   {
     label: "Login",
     href: "https://app.knolbase.com",
@@ -26,7 +30,7 @@ const navItems = [
 ];
 const Header = () => {
   return (
-    <section className="w-full fixed top-0 z-100 bg-white/50 backdrop-blur-sm border-b border-gray-200">
+    <section className="w-full fixed top-0 z-100 bg-white/50 backdrop-blur-sm border-b border-gray-200 header">
       <Container paddedSides>
         <div className="py-6 flex items-center justify-between">
           <div className="text-2xl font-bold">
@@ -50,12 +54,12 @@ const Header = () => {
                   </Link>
                 </li>
               ))}
-              <li>
+              <li className=" header-join-waitlist">
                 <Link
                   className="text-sm font-semibold text-white bg-black px-6 py-4 rounded-full hover:bg-gray-900"
                   href="/"
                 >
-                  Sign Up
+                  Join Waitlist
                 </Link>
               </li>
             </ul>
