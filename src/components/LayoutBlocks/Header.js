@@ -21,7 +21,7 @@ const navItems = [
   },
   {
     label: "Login",
-    href: "/",
+    href: "https://app.knolbase.com",
   },
 ];
 const Header = () => {

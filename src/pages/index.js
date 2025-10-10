@@ -28,9 +28,9 @@ const AIAgentAnimationSection = () => {
   const inputStuffPosition = [20, 10, 0, 20, 20];
   const outputStuffPosition = [20, 0, 20];
   return (
-    <section id="aiagent" className="">
+    <section id="aiagent" className="border-t border-gray-200">
       <Container>
-        <div className="py-24 z-40">
+        <div className="py-12 z-40">
           <div className="text-center w-full max-w-4xl mx-auto flex flex-col items-center">
             <h3 className="text-3xl font-bold mb-2">
               Made to learn from your product videos and documents
@@ -175,7 +175,7 @@ const StepsSection = () => {
       title: "Guides",
       description:
         "Use Knolbase AI to generate guides to for the persona in minutes",
-      image: "/images/step-3.png",
+      image: "/images/generate-with-ai.png",
     },
     {
       title: "Users",
@@ -187,11 +187,11 @@ const StepsSection = () => {
       title: "Deploy",
       description:
         "Send personalised portal link to all your users via email or any communication mode",
-      image: "/images/step-5.png",
+      image: "/images/personalised-002.png",
     },
   ];
   return (
-    <section id="stepsSection" className="border-t border-b border-gray-200">
+    <section id="stepsSection" className=" border-b border-gray-200">
       <Container>
         <div className="w-full md:grid grid-cols-10 gap-2 hidden">
           {stepsArr.map((step, index) => (
@@ -216,7 +216,10 @@ const StepsSection = () => {
               key={index}
               className={`md:col-span-2 col-span-12 border-b md:border-b-0 flex flex-col bg-gray-50 md:border-l md:border-r border-gray-200 ${
                 index === 0 ? "border-l-0" : ""
-              } ${index === stepsArr.length - 1 ? "border-r-0" : ""}`}
+              } ${index === stepsArr.length - 1 ? "border-r-0" : ""}
+              first:border-l-0
+              last:border-r-0
+              `}
             >
               <div className="pl-6 pr-4 pt-6 h-[180px]">
                 <h4 className="text-xl font-semibold text-gray-700 mb-1">
@@ -225,7 +228,7 @@ const StepsSection = () => {
                 <p className="text-gray-500">{step.description}</p>
               </div>
 
-              <div className="md:h-[150px] hidden md:flex md:items-center md:justify-center ">
+              <div className="md:h-[150px] hidden md:flex md:items-center  overflow-hidden ">
                 <Image
                   src={step.image}
                   alt={step.title}
@@ -241,6 +244,55 @@ const StepsSection = () => {
         </div>
       </Container>
     </section>
+  );
+};
+
+const FoundersNoteSection = () => {
+  return (
+    <div className="">
+      <Container>
+        <div
+          style={{
+            backgroundImage: `url('/images/athul-background.webp')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          className="py-24 border-b border-gray-200 bg-gray-50 "
+        >
+          <div className="max-w-lg mx-auto py-12 text-base text-gray-500 bg-white px-12">
+            <p>
+              Making a product self serve is a dream for many product builders.
+              <br></br> <br></br>
+              But the sad reality is majority of the software sold to
+              enterprises are complex, solving many problems at once and mostly
+              build without a lot of user context.
+              <br></br> <br></br>
+              This created a crippling problem where software company spend a
+              lot of time training users on how to get their jobs done.
+              <br></br> <br></br>
+              Whether they are new customers or existing ones, SaaS companies
+              spend a lot of time on training users therefore spending more
+              money on human capital.
+              <br></br> <br></br>
+              Knolbase&apos;s goal is to help software companies train users in
+              the fastest way.
+            </p>
+            <div>
+              <Image
+                className="w-24 h-24 -ml-3 mt-2 mix-blend-darken"
+                src="/images/athulsign.png"
+                alt="Athul Sign"
+                width={100}
+                height={100}
+              />
+              <div>Athul Suresh</div>
+              <div>Founder, Knolbase</div>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </div>
   );
 };
 
@@ -322,64 +374,69 @@ export default function Home() {
       <MainLayout title="Home">
         <Header />
         <MainHero />
-        <Hero2Section />
+
+        <AIAgentAnimationSection />
 
         <StepsSection />
 
-        <AIAgentAnimationSection />
-        <ScreenTypesSection />
+        <div className="">
+          <Container>
+            <div className="py-12"></div>
+          </Container>
+        </div>
+
+        <Hero2Section />
 
         <div className="">
           <Container>
-            <div
-              style={{
-                backgroundImage: `url('/images/athul-background.webp')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-              className="py-24 border-b border-gray-200 bg-gray-50 "
-            >
-              <div className="max-w-lg mx-auto py-12 text-base text-gray-500 bg-white px-12">
-                <p>
-                  Making a product self serve is a dream for many product
-                  builders.
-                  <br></br> <br></br>
-                  But the sad reality is majority of the software sold to
-                  enterprises are complex, solving many problems at once and
-                  mostly build without a lot of user context.
-                  <br></br> <br></br>
-                  This created a crippling problem where software company spend
-                  a lot of time training users on how to get their jobs done.
-                  <br></br> <br></br>
-                  Whether they are new customers or existing ones, SaaS
-                  companies spend a lot of time on training users therefore
-                  spending more money on human capital.
-                  <br></br> <br></br>
-                  Knolbase&apos;s goal is to help software companies train users
-                  in the fastest way.
-                </p>
-                <div>
-                  <Image
-                    className="w-24 h-24 -ml-3 mt-2 mix-blend-darken"
-                    src="/images/athulsign.png"
-                    alt="Athul Sign"
-                    width={100}
-                    height={100}
+            <div className="py-12"></div>
+          </Container>
+        </div>
+
+        <ScreenTypesSection />
+
+        <FoundersNoteSection />
+
+        <div className=" bg-black">
+          <Container sideBorder={false}>
+            <div className="flex justify-between w-full py-12  h-[200px]">
+              <div className="flex-1 flex items-center justify-center">
+                <span className="text-xs text-gray-400 w-full">
+                  © 2025{" "}
+                  <a
+                    href="https://madebyenigma.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline hover:text-gray-700"
+                  >
+                    Made by Enigma
+                  </a>
+                  , Bangalore. All Rights Reserved
+                </span>
+              </div>
+
+              <div className="max-w-lg mx-auto flex items-center justify-center mt-3">
+                <a
+                  href="https://www.linkedin.com/company/knolbase"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/linkedin-com.svg"
+                    alt="Knolbase"
+                    className="w-4 h-4 opacity-60 hover:opacity-100 grayscale-100 hover:grayscale-50 duration-100"
                   />
-                  <div>Athul Suresh</div>
-                  <div>Founder, Knolbase</div>
-                </div>
+                </a>
               </div>
             </div>
           </Container>
         </div>
 
-        <div className="w-full h-[50px] fixed bottom-0 left-0 bg-red-800 text-center flex items-center justify-center text-white font-medium text-lg z-100">
+        {/* <div className="w-full h-[50px] fixed bottom-0 left-0 bg-red-800 text-center flex items-center justify-center text-white font-medium text-lg z-100">
           Website is still under development
-        </div>
+        </div> */}
 
-        <div className="h-[200px]">.</div>
+        {/* <div className="h-[200px]">.</div> */}
       </MainLayout>
     </>
   );

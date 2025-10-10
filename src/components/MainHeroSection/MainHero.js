@@ -30,7 +30,7 @@ const MainHero = () => {
                 </h1>
                 <h2 className="md:text-lg text-base font-normal text-gray-700">
                   Platform for modern product teams to deliver personalized,
-                  AI-driven training so every user persona reaches value—fast.
+                  AI-driven training so every user persona reaches value faster.
                 </h2>
               </div>
 
