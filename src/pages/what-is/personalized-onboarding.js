@@ -47,7 +47,7 @@ const ProblemSection = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Traditional onboarding approaches create friction instead of value.
-            Here's what's broken and how Knolbase fixes it.
+            Here&apos;s what&apos;s broken and how Knolbase fixes it.
           </p>
         </div>
 
@@ -106,8 +106,8 @@ const WhyPersonalizationSection = () => {
             Why Personalization Matters
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Personalized onboarding isn't just nice to have—it's essential for
-            modern B2B software success.
+            Personalized onboarding isn&apos;t just nice to have—it&apos;s
+            essential for modern B2B software success.
           </p>
         </div>
 
@@ -237,7 +237,7 @@ const PersonalizationStrategiesSection = () => {
             Personalization Strategies That Work
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Based on proven strategies from top SaaS companies, here's how
+            Based on proven strategies from top SaaS companies, here&apos;s how
             Knolbase implements effective personalization.
           </p>
         </div>

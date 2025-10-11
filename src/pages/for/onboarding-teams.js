@@ -130,11 +130,11 @@ const ProblemSection = () => {
       <Container>
         <div className="text-center mb-2 py-28">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Your users are stuck at "What's Next?"
+            Your users are stuck at &quot;What&apos;s Next?&quot;
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Every onboarding team faces the same problems. Here's how Knolbase
-            solves them.
+            Every onboarding team faces the same problems. Here&apos;s how
+            Knolbase solves them.
           </p>
         </div>
 
@@ -356,7 +356,7 @@ const CTASection = () => {
             Ready to Transform Your Onboarding?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join forward-thinking teams who've already made the switch to
+            Join forward-thinking teams who&apos;ve already made the switch to
             AI-powered onboarding.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
