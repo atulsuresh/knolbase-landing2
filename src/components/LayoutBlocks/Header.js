@@ -7,10 +7,10 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRef, useEffect } from "react";
 
 const navItems = [
-  // {
-  //   label: "Product for Onboarding",
-  //   href: "/",
-  // },
+  {
+    label: "Product for Onboarding Teams",
+    href: "/for/onboarding-teams",
+  },
   // {
   //   label: "Onboarding Solutions",
   //   href: "/",
@@ -35,13 +35,15 @@ const Header = () => {
       <Container paddedSides>
         <div className="py-6 flex items-center justify-between">
           <div className="text-2xl font-bold">
-            <Image
-              src="/knolbase-logo.svg"
-              alt="Logo"
-              width={100}
-              height={100}
-              className="w-[130px] h-10"
-            />
+            <Link href="/">
+              <Image
+                src="/knolbase-logo.svg"
+                alt="Logo"
+                width={100}
+                height={100}
+                className="w-[130px] h-10"
+              />
+            </Link>
           </div>
           <div>
             <ul className=" items-center gap-10 hidden md:flex">

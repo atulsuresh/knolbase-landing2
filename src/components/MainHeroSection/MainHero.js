@@ -6,6 +6,7 @@ import SideBlockAnimation from "./SideBlockAnimation";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
+import MainCTAButton from "../MainCTAButton";
 
 const MainHero = () => {
   const heroScreenRef = useRef(null);
@@ -35,12 +36,7 @@ const MainHero = () => {
               </div>
 
               <div className="mt-7">
-                <Link
-                  href="https://tally.so/r/3EdE7q"
-                  className="text-sm inline-block text-center font-semibold text-white bg-black px-6 py-4 rounded-full hover:bg-gray-900"
-                >
-                  Join Waitlist
-                </Link>
+                <MainCTAButton />
               </div>
             </div>
 
